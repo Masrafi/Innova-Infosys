@@ -4,11 +4,12 @@ class UsagesOption extends StatelessWidget {
   late String title;
   late String amount;
   late String pow;
+
   UsagesOption({required this.title, required this.amount, required this.pow});
 
   @override
   Widget build(BuildContext context) {
-    return  Row(
+    return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
@@ -24,8 +25,7 @@ class UsagesOption extends StatelessWidget {
               amount,
               style: TextStyle(
                 color: Colors.white,
-                fontSize:
-                MediaQuery.of(context).size.height / 55,
+                fontSize: MediaQuery.of(context).size.height / 55,
                 fontWeight: FontWeight.w500,
               ),
             ),
@@ -36,8 +36,7 @@ class UsagesOption extends StatelessWidget {
               pow,
               style: TextStyle(
                 color: Colors.white,
-                fontSize:
-                MediaQuery.of(context).size.height / 60,
+                fontSize: MediaQuery.of(context).size.height / 60,
               ),
             ),
           ],

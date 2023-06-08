@@ -16,7 +16,8 @@ class Light extends StatelessWidget {
           height: 120,
           width: 110,
           decoration: const BoxDecoration(
-              gradient: RadialGradient(colors: [
+            gradient: RadialGradient(
+              colors: [
                 Color(0xffD35400),
                 Color(0xffD35400),
                 Color(0xffD35400),
@@ -25,7 +26,9 @@ class Light extends StatelessWidget {
                 Color(0xffCA6F1E),
                 Colors.teal,
                 //Colors.teal,
-              ],),),
+              ],
+            ),
+          ),
         ),
       ),
     );

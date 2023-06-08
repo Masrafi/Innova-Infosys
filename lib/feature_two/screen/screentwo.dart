@@ -8,17 +8,6 @@ import '../widget/insensity_below.dart';
 import '../widget/light.dart';
 import '../widget/usages_option.dart';
 
-class MyWidget extends StatelessWidget {
-  Widget build(BuildContext context) {
-    return IconButton(
-        // Use the FaIcon Widget + FontAwesomeIcons class for the IconData
-        icon: const FaIcon(FontAwesomeIcons.gamepad),
-        onPressed: () {
-          print("Pressed");
-        });
-  }
-}
-
 class ScreenTwo extends StatefulWidget {
   const ScreenTwo({Key? key}) : super(key: key);
 
@@ -147,16 +136,27 @@ class _ScreenTwoState extends State<ScreenTwo> {
                       const SizedBox(
                         height: 5,
                       ),
-
-                      UsagesOption(title: 'Use Today', amount: '50', pow: 'watt',),
+                      UsagesOption(
+                        title: 'Use Today',
+                        amount: '50',
+                        pow: 'watt',
+                      ),
                       const SizedBox(
                         height: 5,
                       ),
-                      UsagesOption(title: 'Use Week', amount: '500', pow: 'kwh',),
+                      UsagesOption(
+                        title: 'Use Week',
+                        amount: '500',
+                        pow: 'kwh',
+                      ),
                       const SizedBox(
                         height: 5,
                       ),
-                      UsagesOption(title: 'Use Month', amount: '5000', pow: 'kmh',),
+                      UsagesOption(
+                        title: 'Use Month',
+                        amount: '5000',
+                        pow: 'kmh',
+                      ),
                     ],
                   ),
                 ],
@@ -181,7 +181,6 @@ class _ScreenTwoState extends State<ScreenTwo> {
               ),
               child: Column(
                 children: [
-
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -201,9 +200,9 @@ class _ScreenTwoState extends State<ScreenTwo> {
                           Container(
                             width: 30.0,
                             height: 30.0,
-                            decoration: new BoxDecoration(
+                            decoration: const BoxDecoration(
                               color: Colors.orange,
-                              borderRadius: const BorderRadius.all(
+                              borderRadius: BorderRadius.all(
                                 Radius.circular(5),
                               ),
                             ),
@@ -217,13 +216,18 @@ class _ScreenTwoState extends State<ScreenTwo> {
                         ],
                       ),
                       TextButton(
-                        onPressed: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>ScreenThree(),),);
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ScreenThree(),
+                            ),
+                          );
                         },
                         child: Container(
                           width: 30.0,
                           height: 30.0,
-                          decoration: new BoxDecoration(
+                          decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: const BorderRadius.all(
                               Radius.circular(5),
@@ -245,7 +249,9 @@ class _ScreenTwoState extends State<ScreenTwo> {
                     height: 10,
                   ),
                   const ActiveOption(),
-                  const SizedBox(height: 15,),
+                  const SizedBox(
+                    height: 15,
+                  ),
                   const ActiveOption(),
                 ],
               ),

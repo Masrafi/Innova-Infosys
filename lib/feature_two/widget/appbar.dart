@@ -25,8 +25,7 @@ class AppBar1 extends StatelessWidget {
           child: Text(
             "Lamp",
             style: TextStyle(
-              fontSize:
-              MediaQuery.of(context).size.height / 38,
+              fontSize: MediaQuery.of(context).size.height / 38,
               fontWeight: FontWeight.w500,
               color: Colors.white,
             ),

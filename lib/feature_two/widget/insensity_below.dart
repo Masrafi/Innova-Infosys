@@ -6,7 +6,7 @@ class InsensityBelow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Row(
+    return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         const Icon(
@@ -26,8 +26,7 @@ class InsensityBelow extends StatelessWidget {
 
               Container(
                 margin: EdgeInsets.only(
-                  top:
-                  MediaQuery.of(context).size.height / 80,
+                  top: MediaQuery.of(context).size.height / 80,
                 ),
                 height: 1,
                 width: 250,
@@ -60,8 +59,7 @@ class InsensityBelow extends StatelessWidget {
               Container(
                 margin: EdgeInsets.only(
                   top: 5,
-                  left:
-                  MediaQuery.of(context).size.height / 19,
+                  left: MediaQuery.of(context).size.height / 19,
                 ),
                 height: 11,
                 width: 11,
@@ -85,9 +83,7 @@ class InsensityBelow extends StatelessWidget {
 
               Container(
                 margin: EdgeInsets.only(
-                    top: 5,
-                    left: MediaQuery.of(context).size.height /
-                        9.5),
+                    top: 5, left: MediaQuery.of(context).size.height / 9.5),
                 height: 11,
                 width: 11,
                 decoration: const BoxDecoration(
@@ -111,8 +107,7 @@ class InsensityBelow extends StatelessWidget {
               Container(
                 margin: EdgeInsets.only(
                   top: 5,
-                  left: MediaQuery.of(context).size.height /
-                      6.4,
+                  left: MediaQuery.of(context).size.height / 6.4,
                 ),
                 height: 11,
                 width: 11,
@@ -136,8 +131,7 @@ class InsensityBelow extends StatelessWidget {
               Container(
                 margin: EdgeInsets.only(
                   top: 5,
-                  left: MediaQuery.of(context).size.height /
-                      4.7,
+                  left: MediaQuery.of(context).size.height / 4.7,
                 ),
                 height: 11,
                 width: 11,
@@ -160,8 +154,7 @@ class InsensityBelow extends StatelessWidget {
               ),
               Container(
                 margin: EdgeInsets.only(
-                  left: MediaQuery.of(context).size.height /
-                      4.2,
+                  left: MediaQuery.of(context).size.height / 4.2,
                 ),
                 height: 20,
                 width: 20,
@@ -185,8 +178,7 @@ class InsensityBelow extends StatelessWidget {
               Container(
                 margin: EdgeInsets.only(
                   top: 5,
-                  left: MediaQuery.of(context).size.height /
-                      3.7,
+                  left: MediaQuery.of(context).size.height / 3.7,
                 ),
                 height: 11,
                 width: 11,

@@ -14,17 +14,16 @@ class ScreenOne extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-      backgroundColor:Colors.white,
+    return Scaffold(
+      backgroundColor: Colors.white,
       body: Stack(
         children: [
-          Column   (
+          Column(
             children: [
               Container(
                 height: 310,
                 width: double.infinity,
-
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: Colors.teal,
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(40),
@@ -35,40 +34,61 @@ class ScreenOne extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Image.asset("assets/cc1.png", height: 80,),
-                        Image.asset("assets/cc1.png", height: 45,),
+                        Image.asset(
+                          "assets/cc1.png",
+                          height: 80,
+                        ),
+                        Image.asset(
+                          "assets/cc1.png",
+                          height: 45,
+                        ),
                       ],
                     ),
                     Padding(
-                      padding:  EdgeInsets.only(top: MediaQuery.of(context).size.height / 17, left: MediaQuery.of(context).size.height / 30, right: MediaQuery.of(context).size.height / 30, ),
+                      padding: EdgeInsets.only(
+                        top: MediaQuery.of(context).size.height / 17,
+                        left: MediaQuery.of(context).size.height / 30,
+                        right: MediaQuery.of(context).size.height / 30,
+                      ),
                       child: Row(
                         children: [
                           Column(
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text("Good Morning", style: TextStyle(
-                                fontSize: MediaQuery.of(context).size.height / 40,
-                                color: Colors.white,
-                              ),),
+                              Text(
+                                "Good Morning",
+                                style: TextStyle(
+                                  fontSize:
+                                      MediaQuery.of(context).size.height / 40,
+                                  color: Colors.white,
+                                ),
+                              ),
                               //SizedBox(height: MediaQuery.of(context).size.height / 60,),
-                              Text("Kimberly Masterangelo", style: TextStyle(
-                                fontSize: MediaQuery.of(context).size.height / 55,
-                                color: Colors.black,
-                              ),),
+                              Text(
+                                "Kimberly Masterangelo",
+                                style: TextStyle(
+                                  fontSize:
+                                      MediaQuery.of(context).size.height / 55,
+                                  color: Colors.black,
+                                ),
+                              ),
                             ],
                           ),
-                          Spacer(),
+                          const Spacer(),
                           Column(
                             children: [
                               Container(
-                                  width: 40.0,
-                                  height: 40.0,
-                                  decoration: new BoxDecoration(
-                                    color: Colors.orange,
-                                    shape: BoxShape.circle,
-                                  ),
-                                  child: const Icon(Icons.notifications,),),
+                                width: 40.0,
+                                height: 40.0,
+                                decoration: const BoxDecoration(
+                                  color: Colors.orange,
+                                  shape: BoxShape.circle,
+                                ),
+                                child: const Icon(
+                                  Icons.notifications,
+                                ),
+                              ),
                             ],
                           ),
                         ],
@@ -95,24 +115,36 @@ class ScreenOne extends StatelessWidget {
                       height: 180,
                       child: Column(
                         children: [
-                          Cloud(),
-                          Divider(),
+                          const Cloud(),
+                          const Divider(),
                           Row(
                             children: [
-                              DistanceDetails(title: 'Humidity', temp: '97', image: Image.asset("assets/humidity.png"),),
-                              SizedBox(width: 5,),
-                              DistanceDetails(title: 'Visibility', temp: '80', image: Image.asset("assets/eyes.png"),),
-
-                              SizedBox(width: 5,),
-                              DistanceDetails(title: 'NE Wind', temp: '88', image: Image.asset("assets/wind.png"),),
-
+                              DistanceDetails(
+                                title: 'Humidity',
+                                temp: '97',
+                                image: Image.asset("assets/humidity.png"),
+                              ),
+                              const SizedBox(
+                                width: 5,
+                              ),
+                              DistanceDetails(
+                                title: 'Visibility',
+                                temp: '80',
+                                image: Image.asset("assets/eyes.png"),
+                              ),
+                              const SizedBox(
+                                width: 5,
+                              ),
+                              DistanceDetails(
+                                title: 'NE Wind',
+                                temp: '88',
+                                image: Image.asset("assets/wind.png"),
+                              ),
                             ],
                           )
                         ],
                       ),
                     ),
-
-
                   ],
                 ),
               ),
@@ -126,7 +158,7 @@ class ScreenOne extends StatelessWidget {
                     left: MediaQuery.of(context).size.height / 30,
                     right: MediaQuery.of(context).size.height / 30,
                   ),
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
                       topRight: Radius.circular(40),
@@ -134,36 +166,79 @@ class ScreenOne extends StatelessWidget {
                   ),
                   child: Column(
                     children: [
-                      Rooms(),
-                      SizedBox(height: 10,),
+                      const Rooms(),
+                      const SizedBox(
+                        height: 10,
+                      ),
                       Row(
                         children: [
                           Expanded(
-                              child: RoomsDetails(title: '6', temp: '6', details: 'Living Room', device: 'Devices', num: '7', image: Image.asset("assets/chofa.png", width: 100,),)
+                              child: RoomsDetails(
+                            title: '6',
+                            temp: '6',
+                            details: 'Living Room',
+                            device: 'Devices',
+                            num: '7',
+                            image: Image.asset(
+                              "assets/chofa.png",
+                              width: 100,
+                            ),
+                          )),
+                          const SizedBox(
+                            width: 10,
                           ),
-                          SizedBox(width: 10,),
                           Expanded(
-                              child: RoomsDetails(title: '12', temp: '12', details: 'Bedroom', device: 'Devices', num: '5', image: Image.asset("assets/khat.png", width: 100,),)
-
-                          ),
+                              child: RoomsDetails(
+                            title: '12',
+                            temp: '12',
+                            details: 'Bedroom',
+                            device: 'Devices',
+                            num: '5',
+                            image: Image.asset(
+                              "assets/khat.png",
+                              width: 100,
+                            ),
+                          )),
                         ],
                       ),
-                      SizedBox(height: 10,),
-                      Active(),
-                      SizedBox(height: 10,),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      const Active(),
+                      const SizedBox(
+                        height: 10,
+                      ),
                       Row(
                         children: [
                           Expanded(
-                              child: ActiveElements(title: 'Temprature', value: '6', content: 'AC', contentDetails: 'Living Room', image: Image.asset("assets/ac.png", height: 60), onPressed: () {
-
-                              },)
+                              child: ActiveElements(
+                            title: 'Temprature',
+                            value: '6',
+                            content: 'AC',
+                            contentDetails: 'Living Room',
+                            image: Image.asset("assets/ac.png", height: 60),
+                            onPressed: () {},
+                          )),
+                          const SizedBox(
+                            width: 10,
                           ),
-                          SizedBox(width: 10,),
-
                           Expanded(
-                            child: ActiveElements(title: 'Temprature', value: '6', content: 'Lamp', contentDetails: 'Dining Room', image: Image.asset("assets/lamp1.png", height: 60), onPressed: () {
-                              Navigator.push(context, MaterialPageRoute(builder: (context)=>ScreenTwo(),),);
-                            },),
+                            child: ActiveElements(
+                              title: 'Temprature',
+                              value: '6',
+                              content: 'Lamp',
+                              contentDetails: 'Dining Room',
+                              image:
+                                  Image.asset("assets/lamp1.png", height: 60),
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => const ScreenTwo(),
+                                  ),
+                                );
+                              },
+                            ),
                           ),
                         ],
                       ),
@@ -171,10 +246,9 @@ class ScreenOne extends StatelessWidget {
                   ),
                 ),
               ),
-
             ],
           ),
-          BottomElements(),
+          const BottomElements(),
         ],
       ),
     );

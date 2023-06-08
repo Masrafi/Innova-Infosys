@@ -10,7 +10,7 @@ class BottomElements extends StatelessWidget {
       child: Container(
         height: 60,
         width: double.infinity,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           color: Colors.teal,
           borderRadius: BorderRadius.only(
             topRight: Radius.circular(20),
@@ -21,12 +21,14 @@ class BottomElements extends StatelessWidget {
           alignment: Alignment.bottomCenter,
           child: Row(
             children: [
-              SizedBox(width: 15,),
+              const SizedBox(
+                width: 15,
+              ),
               Expanded(
                 flex: 2,
                 child: Container(
                   height: 50,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.all(
                       Radius.circular(10),
@@ -35,58 +37,87 @@ class BottomElements extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Image.asset("assets/home.png", color: Colors.teal,),
-                      SizedBox(width: 10,),
-                      Text("Home", style: TextStyle(
-                          fontSize: MediaQuery.of(context).size.height / 55,
-                          color: Colors.teal,
-                          fontWeight: FontWeight.w500
-                      ),),
-
+                      Image.asset(
+                        "assets/home.png",
+                        color: Colors.teal,
+                      ),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                        "Home",
+                        style: TextStyle(
+                            fontSize: MediaQuery.of(context).size.height / 55,
+                            color: Colors.teal,
+                            fontWeight: FontWeight.w500),
+                      ),
                     ],
                   ),
-                ),),
-
-              SizedBox(width: 7,),
+                ),
+              ),
+              const SizedBox(
+                width: 7,
+              ),
               Expanded(
                 flex: 1,
                 child: Container(
                   height: 50,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.all(
                       Radius.circular(10),
                     ),
                   ),
-                  child:  Center(child: Image.asset("assets/net fill.png", color: Colors.teal,)),
-                ),),
-              SizedBox(width: 7,),
+                  child: Center(
+                      child: Image.asset(
+                    "assets/net fill.png",
+                    color: Colors.teal,
+                  )),
+                ),
+              ),
+              const SizedBox(
+                width: 7,
+              ),
               Expanded(
                 flex: 1,
                 child: Container(
                   height: 50,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.all(
                       Radius.circular(10),
                     ),
                   ),
-                  child:  Center(child: Image.asset("assets/pie.png", color: Colors.teal,)),
-                ),),
-              SizedBox(width: 7,),
+                  child: Center(
+                      child: Image.asset(
+                    "assets/pie.png",
+                    color: Colors.teal,
+                  )),
+                ),
+              ),
+              const SizedBox(
+                width: 7,
+              ),
               Expanded(
                 flex: 1,
                 child: Container(
                   height: 50,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.all(
                       Radius.circular(10),
                     ),
                   ),
-                  child:  Center(child: Image.asset("assets/user fill.png", color: Colors.teal,)),
-                ),),
-              SizedBox(width: 15,),
+                  child: Center(
+                      child: Image.asset(
+                    "assets/user fill.png",
+                    color: Colors.teal,
+                  )),
+                ),
+              ),
+              const SizedBox(
+                width: 15,
+              ),
             ],
           ),
         ),

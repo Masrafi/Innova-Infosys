@@ -8,14 +8,21 @@ class ActiveDetailsTh extends StatelessWidget {
   late Image image;
   late Color color;
   late Icon icon;
-  ActiveDetailsTh({required this.icon, required this.title, required this.color, required this.count, required this.image, required this.type});
+
+  ActiveDetailsTh(
+      {required this.icon,
+      required this.title,
+      required this.color,
+      required this.count,
+      required this.image,
+      required this.type});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 80,
       width: double.infinity,
-      margin: EdgeInsets.only(bottom: 10),
+      margin: const EdgeInsets.only(bottom: 10),
       padding: const EdgeInsets.only(
         top: 15,
         right: 12,
@@ -37,43 +44,73 @@ class ActiveDetailsTh extends StatelessWidget {
       ),
       child: Row(
         children: [
-          Expanded(flex:2, child: Center(
-            child: Container(
-              width: 50,
-              height: 50,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: Color(0xFFe0f2f1),),
-              child: icon,
+          Expanded(
+            flex: 2,
+            child: Center(
+              child: Container(
+                width: 50,
+                height: 50,
+                decoration: const BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Color(0xFFe0f2f1),
+                ),
+                child: icon,
+              ),
             ),
           ),
+          const SizedBox(
+            width: 15,
           ),
-          SizedBox(width: 15,),
-          Expanded(flex:6,child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(title, style: TextStyle(fontWeight: FontWeight.w500,),),
-              SizedBox(height: 2,),
-              Text(type, style: TextStyle(fontSize: 12,),),
-              SizedBox(height: 2,),
-              Text(count, style: TextStyle(fontSize: 12,color: Colors.black.withOpacity(0.3),),),
-            ],
-          ),),
-          Expanded(flex:3,child: Column(
-            children: [
-
-              Align(
-                  alignment: Alignment.topRight,child: Text("1000 kw/h")),
-              Row(
-                children: [
-                  Spacer(),
-                  image,
-                  Text("-11.2%"),
-                ],
-              ),
-            ],
-          ),),
+          Expanded(
+            flex: 6,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  title,
+                  style: const TextStyle(
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                const SizedBox(
+                  height: 2,
+                ),
+                Text(
+                  type,
+                  style: const TextStyle(
+                    fontSize: 12,
+                  ),
+                ),
+                const SizedBox(
+                  height: 2,
+                ),
+                Text(
+                  count,
+                  style: TextStyle(
+                    fontSize: 12,
+                    color: Colors.black.withOpacity(0.3),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Expanded(
+            flex: 3,
+            child: Column(
+              children: [
+                const Align(
+                    alignment: Alignment.topRight, child: Text("1000 kw/h")),
+                Row(
+                  children: [
+                    const Spacer(),
+                    image,
+                    const Text("-11.2%"),
+                  ],
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );

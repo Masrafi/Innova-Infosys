@@ -46,13 +46,15 @@ class ActiveOption extends StatelessWidget {
                   Text(
                     "Dining Room | Tue Thu",
                     style: TextStyle(
-                      fontSize:
-                      MediaQuery.of(context).size.height / 60,
+                      fontSize: MediaQuery.of(context).size.height / 60,
                     ),
                   ),
                 ],
               ),
-              Image.asset("assets/on.png", height: 18,),
+              Image.asset(
+                "assets/on.png",
+                height: 18,
+              ),
             ],
           ),
           const SizedBox(
@@ -76,20 +78,14 @@ class ActiveOption extends StatelessWidget {
                         Text(
                           "from",
                           style: TextStyle(
-                            fontSize: MediaQuery.of(context)
-                                .size
-                                .height /
-                                60,
+                            fontSize: MediaQuery.of(context).size.height / 60,
                           ),
                         ),
                         Text(
                           "8 pm",
                           style: TextStyle(
                             fontWeight: FontWeight.w500,
-                            fontSize: MediaQuery.of(context)
-                                .size
-                                .height /
-                                60,
+                            fontSize: MediaQuery.of(context).size.height / 60,
                           ),
                         ),
                       ],
@@ -107,9 +103,9 @@ class ActiveOption extends StatelessWidget {
                 child: Align(
                   alignment: Alignment.topRight,
                   child: Column(
-                    children: [
-                      const Text("to"),
-                      const Text("8 am"),
+                    children: const [
+                      Text("to"),
+                      Text("8 am"),
                     ],
                   ),
                 ),
@@ -125,15 +121,15 @@ class ActiveOption extends StatelessWidget {
               Expanded(
                 flex: 2,
                 child: Column(
-                  children: [
-                    const Icon(
+                  children: const [
+                    Icon(
                       Icons.delete,
                       size: 20,
                     ),
-                    const SizedBox(
+                    SizedBox(
                       height: 5,
                     ),
-                    const Icon(
+                    Icon(
                       FontAwesomeIcons.penToSquare,
                       size: 20,
                     ),
