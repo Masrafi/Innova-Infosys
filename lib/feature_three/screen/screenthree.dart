@@ -2,7 +2,7 @@ import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:innova_infosys/feature_one/widget/rooms.dart';
-
+import 'package:innova_infosys/feature_three/widget/liner_graph.dart';
 import '../../feature_one/widget/bottom_elements.dart';
 import '../widget/active_details_3.dart';
 
@@ -29,7 +29,9 @@ class ScreenThree extends StatelessWidget {
                   padding: const EdgeInsets.all(10),
                   width: double.infinity,
                   height: 300,
-                  child: LineChart(
+                  child: HomePage()
+
+                  /*LineChart(
                     LineChartData(
                         borderData: FlBorderData(show: false),
                         lineBarsData: [
@@ -45,7 +47,8 @@ class ScreenThree extends StatelessWidget {
                             const FlSpot(8, 20)
                           ])
                         ]),
-                  ),
+                  )*/
+                  ,
                 ),
               ),
               Container(
