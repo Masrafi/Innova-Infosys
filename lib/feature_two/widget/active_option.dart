@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ActiveOption extends StatelessWidget {
-  const ActiveOption({Key? key}) : super(key: key);
+  late Image image;
+  ActiveOption({required this.image});
 
   @override
   Widget build(BuildContext context) {
@@ -51,10 +52,7 @@ class ActiveOption extends StatelessWidget {
                   ),
                 ],
               ),
-              Image.asset(
-                "assets/on.png",
-                height: 18,
-              ),
+              image,
             ],
           ),
           const SizedBox(

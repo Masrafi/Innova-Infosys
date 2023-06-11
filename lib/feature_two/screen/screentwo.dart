@@ -19,6 +19,7 @@ class _ScreenTwoState extends State<ScreenTwo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Column(
         children: [
           Container(
@@ -248,11 +249,17 @@ class _ScreenTwoState extends State<ScreenTwo> {
                   const SizedBox(
                     height: 10,
                   ),
-                  const ActiveOption(),
+                   ActiveOption(image: Image.asset(
+                     "assets/on.png",
+                     height: 18,
+                   ),),
                   const SizedBox(
                     height: 15,
                   ),
-                  const ActiveOption(),
+                   ActiveOption(image: Image.asset(
+                     "assets/on.png",
+                     height: 18,
+                   ),),
                 ],
               ),
             ),

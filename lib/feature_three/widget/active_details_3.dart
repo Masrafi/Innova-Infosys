@@ -6,13 +6,13 @@ class ActiveDetailsTh extends StatelessWidget {
   late String type;
   late String count;
   late Image image;
-  late Color color;
+  late Color color1;
   late Icon icon;
 
   ActiveDetailsTh(
       {required this.icon,
       required this.title,
-      required this.color,
+      required this.color1,
       required this.count,
       required this.image,
       required this.type});
@@ -105,7 +105,7 @@ class ActiveDetailsTh extends StatelessWidget {
                   children: [
                     const Spacer(),
                     image,
-                    const Text("-11.2%"),
+                     Text("-11.2%", style: TextStyle(color: color1,),),
                   ],
                 ),
               ],
