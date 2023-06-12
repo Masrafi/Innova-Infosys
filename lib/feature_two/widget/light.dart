@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
+import '../../utils/color.dart';
+
 class Light extends StatelessWidget {
-  const Light({Key? key}) : super(key: key);
+  var colorFac = ColorFactory();
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +17,7 @@ class Light extends StatelessWidget {
         child: Container(
           height: 120,
           width: 110,
-          decoration: const BoxDecoration(
+          decoration:  BoxDecoration(
             gradient: RadialGradient(
               colors: [
                 Color(0xffD35400),
@@ -24,7 +26,7 @@ class Light extends StatelessWidget {
                 Color(0xffDC7633),
                 Color(0xffEC7063),
                 Color(0xffCA6F1E),
-                Colors.teal,
+                colorFac.theme,
                 //Colors.teal,
               ],
             ),

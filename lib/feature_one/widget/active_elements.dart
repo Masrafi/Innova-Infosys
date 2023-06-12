@@ -7,6 +7,7 @@ class ActiveElements extends StatelessWidget {
   late final String contentDetails;
   late Image image;
   final VoidCallback onPressed;
+  late Color color;
 
   ActiveElements({
     super.key,
@@ -16,6 +17,7 @@ class ActiveElements extends StatelessWidget {
     required this.contentDetails,
     required this.image,
     required this.onPressed,
+    required this.color,
   });
 
   @override
@@ -24,7 +26,7 @@ class ActiveElements extends StatelessWidget {
       onTap: onPressed,
       child: Container(
         decoration: BoxDecoration(
-          color: Colors.teal[100],
+          color: color,
           borderRadius: const BorderRadius.all(
             Radius.circular(15),
           ),

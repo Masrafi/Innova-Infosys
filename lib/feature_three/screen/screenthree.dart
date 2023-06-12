@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:innova_infosys/feature_four/screen/screenfour.dart';
+import 'package:innova_infosys/utils/color.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 import '../../feature_one/widget/bottom_elements.dart';
 import '../widget/active_details_3.dart';
+import '../widget/chart_data.dart';
 
 
-class ChartData {
-  ChartData(this.x, this.y);
-  final String x;
-  final double? y;
-}
+
 class ScreenThree extends StatelessWidget {
+
+  var colorFac = new ColorFactory();
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,10 @@ class ScreenThree extends StatelessWidget {
       ChartData('Wed', 80),
       ChartData('Thus', 100),
       ChartData('Fri', 150),
-      ChartData('Sat', 130,),
+      ChartData(
+        'Sat',
+        130,
+      ),
     ];
     return Scaffold(
       backgroundColor: Colors.white,
@@ -38,9 +41,9 @@ class ScreenThree extends StatelessWidget {
                   left: MediaQuery.of(context).size.height / 40,
                   right: MediaQuery.of(context).size.height / 40,
                 ),
-                decoration: const BoxDecoration(
-                  color: Colors.teal,
-                  borderRadius: BorderRadius.only(
+                decoration:  BoxDecoration(
+                  color: colorFac.theme,
+                  borderRadius: const BorderRadius.only(
                     bottomLeft: Radius.circular(40),
                   ),
                 ),
@@ -49,22 +52,39 @@ class ScreenThree extends StatelessWidget {
                     Align(
                         alignment: Alignment.bottomLeft,
                         child: Padding(
-                          padding:  EdgeInsets.only(bottom: MediaQuery.of(context).size.height / 35,  ),
-                          child: Text("Day", style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500,),),
+                          padding: EdgeInsets.only(
+                            bottom: MediaQuery.of(context).size.height / 35,
+                          ),
+                          child: const Text(
+                            "Day",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
                         )),
                     Padding(
-                      padding:  EdgeInsets.only(top: MediaQuery.of(context).size.height / 8, left:  MediaQuery.of(context).size.height / 60,),
-                      child: Text("Kwh", style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500,),),
+                      padding: EdgeInsets.only(
+                        top: MediaQuery.of(context).size.height / 8,
+                        left: MediaQuery.of(context).size.height / 60,
+                      ),
+                      child: const Text(
+                        "Kwh",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
                     ),
                     Column(
                       children: [
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text(
+                            const Text(
                               "Smart Home",
                               style: TextStyle(
                                 fontSize: 20,
@@ -83,14 +103,13 @@ class ScreenThree extends StatelessWidget {
                             ),
                           ],
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
-
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text(
+                            const Text(
                               "Usage this week",
                               style: TextStyle(
                                 fontSize: 16,
@@ -99,7 +118,7 @@ class ScreenThree extends StatelessWidget {
                               ),
                             ),
                             Row(
-                              children: [
+                              children: const [
                                 Text(
                                   "2500",
                                   style: TextStyle(
@@ -108,7 +127,9 @@ class ScreenThree extends StatelessWidget {
                                     fontWeight: FontWeight.w500,
                                   ),
                                 ),
-                                SizedBox(width: 5,),
+                                SizedBox(
+                                  width: 5,
+                                ),
                                 Text(
                                   "watt",
                                   style: TextStyle(
@@ -121,19 +142,16 @@ class ScreenThree extends StatelessWidget {
                             )
                           ],
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 30,
                         ),
                         Container(
-
-                          width: double.infinity,
-                          height: 200,
-                          child:
-                          SfCartesianChart(
-                              primaryXAxis: CategoryAxis(),
-
-                              series: <ChartSeries>[
-                                SplineSeries<ChartData, String>(
+                            width: double.infinity,
+                            height: 200,
+                            child: SfCartesianChart(
+                                primaryXAxis: CategoryAxis(),
+                                series: <ChartSeries>[
+                                  SplineSeries<ChartData, String>(
                                     dataSource: chartData,
                                     color: Colors.white,
 
@@ -142,53 +160,15 @@ class ScreenThree extends StatelessWidget {
                                     cardinalSplineTension: 0.9,
                                     xValueMapper: (ChartData data, _) => data.x,
                                     yValueMapper: (ChartData data, _) => data.y,
-                                )
-                              ]
-                          )
-
-
-                       /*   DChartLine(
-                            data: [
-                              {
-                                'id': 'Line',
-                                'data': [
-                                  {'domain': 0, 'measure': 0},
-                                  {'domain': 2, 'measure': 2},
-                                  {'domain': 3, 'measure': 3},
-                                  {'domain': 5, 'measure': 4},
-                                  {'domain': 6, 'measure': 8},
-                                  {'domain': 7, 'measure': 10},
-                                ],
-                              },
-                            ],
-                            lineColor: (lineData, index, id) => Colors.amber,
-                          ),*/
-                          // LineChart(
-                          //   LineChartData(
-                          //       borderData: FlBorderData(show: false),
-                          //       lineBarsData: [
-                          //         LineChartBarData(spots: [
-                          //           const FlSpot(0, 1),
-                          //           const FlSpot(1, 3),
-                          //           const FlSpot(2, 10),
-                          //           const FlSpot(3, 7),
-                          //           const FlSpot(4, 12),
-                          //           const FlSpot(5, 13),
-                          //           const FlSpot(6, 17),
-                          //           const FlSpot(7, 15),
-                          //           const FlSpot(8, 20)
-                          //         ])
-                          //       ]),
-                          // )
-                          //,
-                        ),
+                                  )
+                                ])),
                       ],
                     ),
                   ],
                 ),
               ),
               Container(
-                color: Colors.teal,
+                color: colorFac.theme,
                 child: Container(
                   height: 400,
                   width: double.infinity,
@@ -247,18 +227,19 @@ class ScreenThree extends StatelessWidget {
                             ],
                           ),
                           TextButton(
-                            onPressed: (){
+                            onPressed: () {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => ScreenFour(),
+                                  builder: (context) =>  ScreenFour(),
                                 ),
                               );
                             },
                             child: Text(
                               "See All",
                               style: TextStyle(
-                                fontSize: MediaQuery.of(context).size.height / 50,
+                                fontSize:
+                                    MediaQuery.of(context).size.height / 50,
                                 color: Colors.black,
                                 fontWeight: FontWeight.w500,
                               ),
@@ -305,48 +286,9 @@ class ScreenThree extends StatelessWidget {
               )
             ],
           ),
-          const BottomElements(),
+          BottomElements(),
         ],
       ),
     );
   }
 }
-// Widget chartToRun() {
-//   LabelLayoutStrategy? xContainerLabelLayoutStrategy;
-//   ChartData chartData;
-//   ChartOptions chartOptions = const ChartOptions();
-//   // Example shows how to create ChartOptions instance
-//   //   which will request to end Y axis at maximum data (as all data negative).
-//   // Even though startYAxisAtDataMinRequested is set to true, this will not be granted on bar chart,
-//   //   as it does not make sense there.
-//   chartOptions = const ChartOptions(
-//     dataContainerOptions: DataContainerOptions(
-//       startYAxisAtDataMinRequested: true,
-//     ),
-//   );
-//   chartData = ChartData(
-//     dataRows: const [
-//
-//       [10.0, 40.0, 20.0, 25.0, 30.0, 20.0, 10.0],
-//       [10.0, 40.0, 20.0, 25.0, 30.0, 20.0, 10.0],
-//     ],
-//     xUserLabels: const ['Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat', 'Sun'],
-//
-//     dataRowsLegends: const [
-//       '',
-//       '',
-//     ],
-//     chartOptions: chartOptions,
-//   );
-//   var lineChartContainer = LineChartTopContainer(
-//     chartData: chartData,
-//     xContainerLabelLayoutStrategy: xContainerLabelLayoutStrategy,
-//   );
-//
-//   var lineChart = LineChart(
-//     painter: LineChartPainter(
-//       lineChartContainer: lineChartContainer,
-//     ),
-//   );
-//   return lineChart;
-// }

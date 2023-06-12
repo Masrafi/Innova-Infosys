@@ -7,6 +7,7 @@ class RoomsDetails extends StatelessWidget {
   late final String device;
   late final String num;
   late Image image;
+  late Color color;
 
   RoomsDetails(
       {required this.title,
@@ -14,13 +15,15 @@ class RoomsDetails extends StatelessWidget {
       required this.details,
       required this.device,
       required this.num,
-      required this.image});
+      required this.image,
+      required this.color,
+      });
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Colors.teal[100],
+        color: color,
         borderRadius: const BorderRadius.all(
           Radius.circular(15),
         ),

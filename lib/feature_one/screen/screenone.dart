@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:innova_infosys/feature_two/screen/screentwo.dart';
 
+import '../../utils/color.dart';
 import '../widget/active.dart';
 import '../widget/active_elements.dart';
 import '../widget/bottom_elements.dart';
@@ -9,8 +10,15 @@ import '../widget/distance_details.dart';
 import '../widget/rooms.dart';
 import '../widget/rooms_details.dart';
 
-class ScreenOne extends StatelessWidget {
-  const ScreenOne({Key? key}) : super(key: key);
+class ScreenOne extends StatefulWidget {
+
+
+  @override
+  State<ScreenOne> createState() => _ScreenOneState();
+}
+
+class _ScreenOneState extends State<ScreenOne> {
+var colorFac = new ColorFactory();
 
   @override
   Widget build(BuildContext context) {
@@ -22,8 +30,8 @@ class ScreenOne extends StatelessWidget {
               Container(
                 height: 310,
                 width: double.infinity,
-                decoration: const BoxDecoration(
-                  color: Colors.teal,
+                decoration:  BoxDecoration(
+                  color: colorFac.theme,
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(40),
                   ),
@@ -148,7 +156,7 @@ class ScreenOne extends StatelessWidget {
                 ),
               ),
               Container(
-                color: Colors.teal,
+                color: colorFac.theme,
                 child: Container(
                   //height: 500,
                   width: double.infinity,
@@ -181,7 +189,7 @@ class ScreenOne extends StatelessWidget {
                             image: Image.asset(
                               "assets/chofa.png",
                               width: 100,
-                            ),
+                            ), color: colorFac.nxt,
                           )),
                           const SizedBox(
                             width: 10,
@@ -196,7 +204,7 @@ class ScreenOne extends StatelessWidget {
                             image: Image.asset(
                               "assets/khat.png",
                               width: 100,
-                            ),
+                            ),color: colorFac.nxt,
                           )),
                         ],
                       ),
@@ -216,7 +224,7 @@ class ScreenOne extends StatelessWidget {
                             content: 'AC',
                             contentDetails: 'Living Room',
                             image: Image.asset("assets/ac.png", height: 60),
-                            onPressed: () {},
+                            onPressed: () {}, color: colorFac.nxt2,
                           )),
                           const SizedBox(
                             width: 10,
@@ -226,7 +234,7 @@ class ScreenOne extends StatelessWidget {
                               title: 'Temprature',
                               value: '6',
                               content: 'Lamp',
-                              contentDetails: 'Dining Room',
+                              contentDetails: 'Dining Room',color: colorFac.nxt2,
                               image:
                                   Image.asset("assets/lamp1.png", height: 60),
                               onPressed: () {
@@ -247,7 +255,7 @@ class ScreenOne extends StatelessWidget {
               ),
             ],
           ),
-          const BottomElements(),
+           BottomElements(),
         ],
       ),
     );

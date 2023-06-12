@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:innova_infosys/feature_three/screen/screenthree.dart';
+import 'package:innova_infosys/utils/color.dart';
 
 import '../widget/active_option.dart';
 import '../widget/appbar.dart';
@@ -16,6 +17,7 @@ class ScreenTwo extends StatefulWidget {
 }
 
 class _ScreenTwoState extends State<ScreenTwo> {
+  var colorFac = ColorFactory();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,9 +27,9 @@ class _ScreenTwoState extends State<ScreenTwo> {
           Container(
             height: 390,
             width: double.infinity,
-            decoration: const BoxDecoration(
-              color: Colors.teal,
-              borderRadius: BorderRadius.only(
+            decoration:  BoxDecoration(
+              color: colorFac.theme,
+              borderRadius: const BorderRadius.only(
                 bottomLeft: Radius.circular(40),
               ),
             ),
@@ -40,7 +42,7 @@ class _ScreenTwoState extends State<ScreenTwo> {
               ),
               child: Stack(
                 children: [
-                  const Light(),
+                   Light(),
                   Align(
                     alignment: Alignment.topRight,
                     child: Image.asset(
@@ -165,7 +167,7 @@ class _ScreenTwoState extends State<ScreenTwo> {
             ),
           ),
           Container(
-            color: Colors.teal,
+            color: colorFac.theme,
             child: Container(
               height: 400,
               width: double.infinity,

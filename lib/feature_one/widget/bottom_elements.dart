@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:innova_infosys/utils/color.dart';
 
 class BottomElements extends StatelessWidget {
-  const BottomElements({Key? key}) : super(key: key);
+
+  var colorFac= ColorFactory();
 
   @override
   Widget build(BuildContext context) {
@@ -10,8 +12,8 @@ class BottomElements extends StatelessWidget {
       child: Container(
         height: 60,
         width: double.infinity,
-        decoration: const BoxDecoration(
-          color: Colors.teal,
+        decoration:  BoxDecoration(
+          color: colorFac.theme,
           borderRadius: BorderRadius.only(
             topRight: Radius.circular(20),
             topLeft: Radius.circular(20),

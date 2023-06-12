@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:innova_infosys/utils/color.dart';
 
 import '../../feature_two/widget/active_option.dart';
 
 class ScreenFour extends StatelessWidget {
-  const ScreenFour({Key? key}) : super(key: key);
-
+var colorFac = new ColorFactory();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,21 +19,21 @@ class ScreenFour extends StatelessWidget {
               left: MediaQuery.of(context).size.height / 40,
               right: MediaQuery.of(context).size.height / 40,
             ),
-            decoration: const BoxDecoration(
-              color: Colors.teal,
-              borderRadius: BorderRadius.only(
+            decoration:  BoxDecoration(
+              color: colorFac.theme,
+              borderRadius: const BorderRadius.only(
                 bottomLeft: Radius.circular(40),
               ),
             ),
             child: Column(
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
+                    const Text(
                       "Smart Home",
                       style: TextStyle(
                         fontSize: 20,
@@ -52,7 +52,7 @@ class ScreenFour extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Container(
@@ -68,7 +68,7 @@ class ScreenFour extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
+                      const Text(
                         "Smart Home",
                         style: TextStyle(
                           fontSize: 16,
@@ -84,7 +84,7 @@ class ScreenFour extends StatelessWidget {
             ),
           ),
           Container(
-            color: Colors.teal,
+            color: colorFac.theme,
             child: Container(
               height: 400,
               width: double.infinity,
